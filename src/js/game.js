@@ -234,11 +234,10 @@ export default class Game {
 			} else if (numberOfBlocks === columns) {
 				lines.unshift(y)
 			}
-			console.log(lines)
-			for (let i of lines) {
-				this.playField.splice(i, 1)
-				this.playField.unshift(new Array(columns).fill(0))
-			}
+		}
+		for (let i of lines) {
+			this.playField.splice(i, 1)
+			this.playField.unshift(new Array(columns).fill(0))
 		}
 
 		return lines.length
